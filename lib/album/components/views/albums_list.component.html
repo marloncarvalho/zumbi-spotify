@@ -1,0 +1,4 @@
+<p>Lista de Albums</p>
+<input type="text" name="query" id="query" [(ngModel)]="query">
+<button id="submit" name="submit" (click)="onSearch()">Buscar</button>
+<album-item *ngFor="let album of albums" [album]="album"></album-item>

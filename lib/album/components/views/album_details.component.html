@@ -1,0 +1,32 @@
+<div *ngIf="album != null">
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <a href="{{album.href}}">
+        <img src="{{album.imageUrl}}">
+      </a>
+      <div class="panel-footer">
+        <h3><a href="{{album.href}}">{{album.nome}}</a></h3>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel panel-primary">
+    <table>
+      <theader>
+        <th>#</th>
+        <th>Música</th>
+        <th>Duração</th>
+        <th>L</th>
+      </theader>
+      <tbody>
+        <tr *ngFor="let musica of album.musicas">
+          <td>{{musica.ordem}}</td>
+          <td>{{musica.nome}}</td>
+          <td>{{musica.duracao}}</td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
